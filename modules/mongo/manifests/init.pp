@@ -1,4 +1,4 @@
-class mongo($bind_ip) {
+class mongo($bind_ip, $hostname, $hosts) {
 
   package { 'mongodb':
     ensure => present
@@ -23,6 +23,20 @@ class mongo($bind_ip) {
     content => template("mongo/mongodb.conf"),
     require => Package['mongodb'],
     notify  => Service['mongodb']
+  }
+
+  file { '/etc/hostname':
+    ensure  => present,
+    owner   => root,
+    mode    => 0644,
+    content => template("mongo/hostname")
+  }
+
+  file { '/etc/hosts':
+    ensure  => present,
+    owner   => root,
+    mode    => 0644,
+    content => template("mongo/hosts")
   }
 }
 
