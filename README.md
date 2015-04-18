@@ -9,9 +9,20 @@ Machines are arranged as follows:
 ``mongo1.replica - 192.168.33.21``<br/>
 ``mongo2.replica - 192.168.33.22``<br/>
 
-#Config mongo replicasets
+## Dependencies
+
+Depends of a Vagrant plugin called "librarian-puppet".
+
+To install use:
+
+``vagrant plugin install vagrant-librarian-puppet``
+
+## Running
 
 ``vagrant up``<br/>
+
+## Configuring mongo replicasets
+
 ``vagrant ssh db1``<br/>
 ``mongo``<br/>
 ``rs.initiate()``<br/>
