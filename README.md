@@ -1,7 +1,7 @@
 # mongo_replicaset
 
 This project is a final environment created by Vagrant and Puppet for MongoDB cluster. 
-Will be create 3 machines, each one contains an instance of MongoDB.
+Will be create 3 machines that contains an instance of MongoDB.
 
 Machines are arranged as follows:
 
